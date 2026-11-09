@@ -1,0 +1,43 @@
+# ---------- 依赖 ----------
+node_modules/
+.pnpm-store/
+
+# ---------- 构建产物 ----------
+target/
+dist/
+*.jar
+*.war
+
+# ---------- 本地运行数据（报告上传、H2 数据等） ----------
+data/
+backend/data/
+*.h2.db
+*.mv.db
+
+# ---------- 日志 ----------
+*.log
+logs/
+*.log.*
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# ---------- IDE / 系统 ----------
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db
+
+# ---------- 本地配置与密钥（不要提交） ----------
+.env
+.env.local
+*.pem
+*.p12
+*.keystore

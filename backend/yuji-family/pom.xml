@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.yuji</groupId>
+        <artifactId>yuji-backend</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>yuji-family</artifactId>
+    <name>yuji-family</name>
+    <description>家属协同：家庭绑定、任务包、字段级权限（模块 C）</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.yuji</groupId>
+            <artifactId>yuji-common</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 复用指标/产检数据做"授权可见"的只读视图 -->
+        <dependency>
+            <groupId>com.yuji</groupId>
+            <artifactId>yuji-profile</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 成员列表需要展示昵称（只读 UserMapper，不改认证逻辑） -->
+        <dependency>
+            <groupId>com.yuji</groupId>
+            <artifactId>yuji-auth</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+    </dependencies>
+</project>

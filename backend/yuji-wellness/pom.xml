@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.yuji</groupId>
+        <artifactId>yuji-backend</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>yuji-wellness</artifactId>
+    <name>yuji-wellness</name>
+    <description>女性全周期健康能力域：周期、餐饮、私密咨询、社区、月子、育儿、心理、合作机构</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.yuji</groupId>
+            <artifactId>yuji-common</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 复用孕产档案：全周期首页需要同时知道孕周与产后状态 -->
+        <dependency>
+            <groupId>com.yuji</groupId>
+            <artifactId>yuji-profile</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 社区帖子需要昵称快照；只读 user 表，不参与登录流程 -->
+        <dependency>
+            <groupId>com.yuji</groupId>
+            <artifactId>yuji-auth</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
